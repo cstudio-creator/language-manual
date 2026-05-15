@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Manual</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header-bar">
+  <span class="site-title">
+    <img src="favicon.png" alt="favicon" class="favicon-inline">
+    Language Manual — Pages
+  </span>
+</header>
+
+<div class="sidebar">
+  <a href="#" onclick="loadPage('canonical-expressions.html')">Canonical Expressions</a>
+  <a href="#" onclick="loadPage('canon-expressions.html')">Canon Expressions</a>
+</div>
+
+<main id="content">
+  <p class="intro-text">Select a page from the left column.</p>
+</main>
+
+<script>
+function loadPage(page) {
+  fetch(page)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network error");
+      }
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('content').innerHTML = html;
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        "<p>Error loading page.</p>";
+    });
+}
+</script>
+
+</body>
+</html>
