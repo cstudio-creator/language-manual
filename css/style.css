@@ -138,9 +138,7 @@ li {
   position: relative;
   top: -3px;
 }
-  .book {
-  outline: 4px solid red !important;
-}
+
 /* Optional: subtle section dividers for long manuals */
 .content h3::before {
   content: "—";
