@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  padding-top: 0.3in; 
+  padding-top: 0.3in;
   font-family: "Georgia", "Times New Roman", serif;
   color: #111111;
   background-color: #f9f8f6;
@@ -10,20 +10,34 @@ body {
 }
 
 #content {
-  margin-left: calc(3in + 40px);
-  padding: 60px;
+  margin-left: calc(4.5in + 40px);
+  padding: 0px;
+  padding-top: 162px; /* 117px + ~45px */
   max-width: 750px;
   margin-right: auto;
 }
 
-/* Book column */
+/* BOOK CONTAINER */
 .book {
-  width: 5.5in;              /* your desired column width */
-  margin: 0 auto;            /* centers the column */
-  padding: 0;                /* optional: keep it clean */
+  width: 500px;
+  margin: 0 auto;
+  padding: 0;
 }
 
+/* Book heading */
+.book h1 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0 0 38px 0;
+  padding: 0 20px;
+}
 
+/* Book paragraphs */
+.book p {
+  margin: 0 0 16px 0;
+  padding: 0 20px;
+}
 
 /* Header bar */
 .header-bar {
@@ -40,7 +54,6 @@ body {
   z-index: 10;
 }
 
-
 .header-bar .site-title {
   font-size: 1.8rem;
   font-weight: 600;
@@ -55,7 +68,7 @@ body {
   position: fixed;
   top: 1.5in;
   left: 0;
-  padding: 24px;
+  padding: 12px;
   border-right: 1px solid #111111;
   overflow-y: auto;
 }
